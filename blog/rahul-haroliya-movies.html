@@ -24,10 +24,19 @@
   <style>
 
     body{
-      background:#f5f5f5;
-      font-family:Arial, sans-serif;
-      color:#222;
-      line-height:1.8;
+      margin:0;
+      background:#0b0b0b;
+      font-family:Arial,sans-serif;
+      color:#e5e5e5;
+      line-height:1.9;
+    }
+
+    /* HEADER */
+
+    .navbar{
+      background:#000 !important;
+      border-bottom:1px solid rgba(57,255,20,.25);
+      box-shadow:0 0 18px rgba(57,255,20,.12);
     }
 
     /* HERO */
@@ -37,19 +46,22 @@
       color:#fff;
       padding:90px 20px;
       text-align:center;
+      border-bottom:1px solid rgba(57,255,20,.2);
     }
 
     .hero h1{
       font-size:48px;
-      margin-bottom:20px;
       font-weight:700;
+      color:#39ff14;
+      text-shadow:0 0 18px rgba(57,255,20,.8);
+      margin-bottom:22px;
     }
 
     .hero p{
-      max-width:800px;
+      max-width:850px;
       margin:auto;
       font-size:18px;
-      opacity:0.9;
+      color:#ccc;
     }
 
     /* BLOG */
@@ -59,42 +71,68 @@
     }
 
     .blog-card{
-      background:#fff;
-      border-radius:18px;
+      background:#000;
+      border-radius:22px;
       padding:40px;
-      box-shadow:0 5px 25px rgba(0,0,0,0.08);
+      border:1px solid rgba(57,255,20,.25);
+      box-shadow:0 0 30px rgba(57,255,20,.12);
     }
 
     .blog-image{
       width:100%;
-      border-radius:14px;
+      border-radius:18px;
       margin-bottom:35px;
+      border:1px solid rgba(57,255,20,.2);
+      box-shadow:0 0 25px rgba(57,255,20,.15);
     }
 
     .blog-card h2{
-      margin-top:40px;
-      margin-bottom:15px;
+      margin-top:45px;
+      margin-bottom:18px;
       font-weight:700;
-      color:#111;
+      color:#39ff14;
+      text-shadow:0 0 10px rgba(57,255,20,.6);
     }
 
     .blog-card p{
-      color:#444;
+      color:#d0d0d0;
       font-size:17px;
-      margin-bottom:20px;
+      margin-bottom:22px;
+      text-align:justify;
+    }
+
+    .blog-card strong{
+      color:#39ff14;
+    }
+
+    hr{
+      border:none;
+      height:1px;
+      background:rgba(57,255,20,.2);
+      margin:35px 0;
+    }
+
+    blockquote{
+      border-left:4px solid #39ff14;
+      padding-left:18px;
+      margin:40px 0;
+      color:#d8ffd1;
+      font-style:italic;
+      font-size:18px;
     }
 
     /* AUTHOR BOX */
 
     .author-box{
-      margin-top:50px;
+      margin-top:55px;
       display:flex;
       gap:25px;
       align-items:center;
-      background:#fafafa;
-      border:1px solid #ddd;
-      border-radius:16px;
+      background:#050505;
+      border:1px solid rgba(57,255,20,.3);
+      border-radius:18px;
       padding:25px;
+      box-shadow:0 0 20px rgba(57,255,20,.18);
     }
 
     .author-img{
@@ -102,12 +140,20 @@
       height:120px;
       border-radius:50%;
       object-fit:cover;
+      border:2px solid #39ff14;
+      box-shadow:0 0 18px rgba(57,255,20,.5);
     }
 
     .author-info h3{
-      margin-bottom:10px;
+      margin-bottom:12px;
       font-size:24px;
       font-weight:700;
+      color:#39ff14;
+    }
+
+    .author-info p{
+      color:#cfcfcf;
+      margin-bottom:12px;
     }
 
     .author-links{
@@ -115,7 +161,7 @@
     }
 
     .author-links a{
-      color:#000;
+      color:#39ff14;
       text-decoration:none;
       font-weight:600;
     }
@@ -128,16 +174,30 @@
 
     footer{
       background:#000;
-      color:#fff;
       text-align:center;
-      padding:25px 10px;
-      margin-top:50px;
+      padding:28px 10px;
+      margin-top:60px;
+      border-top:1px solid rgba(57,255,20,.2);
+    }
+
+    footer p{
+      color:#aaa;
+      margin:0;
+      font-size:15px;
     }
 
     @media(max-width:768px){
 
+      .hero{
+        padding:70px 18px;
+      }
+
       .hero h1{
         font-size:34px;
+      }
+
+      .hero p{
+        font-size:16px;
       }
 
       .author-box{
@@ -161,7 +221,7 @@
 
   <header class="sticky-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black py-0">
+    <nav class="navbar navbar-expand-lg navbar-dark py-0">
 
       <div class="container-fluid">
 
@@ -169,7 +229,6 @@
 
           <img src="/static/images/logo.png"
             alt="Rahul Haroliya Logo"
-            class="nav-logo"
             width="200"
             height="90">
 
@@ -214,22 +273,27 @@
           loading="lazy">
 
         <p>
-          Rahul Haroliya, popularly known as <strong>The Joker Rider™</strong>,
-          is an Indian actor, motorcycle traveler, and digital content creator
-          from Ahmedabad, Gujarat.
+          Rahul Haroliya, popularly known as
+          <strong>The Joker Rider™</strong>,
+          is an Indian actor, motorcycle traveler,
+          and digital content creator from Ahmedabad, Gujarat.
         </p>
 
         <p>
-          He became known for documenting real motorcycle journeys, cinematic travel
-          visuals, and authentic road experiences across India. His passion for storytelling,
-          adventure, and filmmaking eventually led him toward opportunities in the film industry.
+          He became known for documenting real motorcycle journeys,
+          cinematic travel visuals, and authentic road experiences across India.
+          His passion for storytelling, adventure, and filmmaking
+          eventually led him toward opportunities in the Indian film industry.
         </p>
 
-        <h2>From Moto Vlogger to Actor</h2>
+        <hr>
+
+        <h2>🎬 From Moto Vlogger to Actor</h2>
 
         <p>
-          Before entering films, Rahul Haroliya built his digital identity through motorcycle
-          travel videos, photography, travel blogs, and social media storytelling.
+          Before entering films, Rahul Haroliya built his digital identity through
+          motorcycle travel videos, photography, travel blogs,
+          and social media storytelling.
         </p>
 
         <p>
@@ -238,7 +302,9 @@
           <strong>The Joker Rider™</strong>.
         </p>
 
-        <h2>Film Projects</h2>
+        <hr>
+
+        <h2>🎥 Film Projects</h2>
 
         <p>
           Rahul Haroliya has worked in film projects including
@@ -252,25 +318,36 @@
           beyond digital content creation and into cinema.
         </p>
 
-        <h2>Creative Vision</h2>
+        <hr>
+
+        <h2>📸 Creative Vision</h2>
 
         <p>
           Rahul Haroliya continues balancing multiple creative fields including acting,
-          travel filmmaking, photography, blogging, and digital storytelling.
+          travel filmmaking, photography, blogging,
+          and digital storytelling.
         </p>
 
         <p>
-          His content focuses on real travel experiences, unexplored locations,
-          road journeys, and cinematic visuals inspired by Indian travel culture.
+          His content focuses on real travel experiences,
+          unexplored locations, road journeys,
+          and cinematic visuals inspired by Indian travel culture.
         </p>
 
-        <h2>Future Journey</h2>
+        <hr>
+
+        <h2>🚀 Future Journey</h2>
 
         <p>
           With growing experience in filmmaking and digital media,
-          Rahul Haroliya continues building his presence in both the travel
-          and entertainment industries.
+          Rahul Haroliya continues building his presence in both
+          the travel and entertainment industries.
         </p>
+
+        <blockquote>
+          “Passion, consistency, and real experiences
+          are the foundation of every successful journey.”
+        </blockquote>
 
         <!-- AUTHOR BOX -->
 
@@ -289,8 +366,8 @@
             <p>
               Rahul Haroliya, also known as The Joker Rider™, is an Indian actor,
               motorcycle travel blogger and digital content creator from Ahmedabad, Gujarat.
-              He has worked in the film "Dhurandhar: The Revenger" and documents real road
-              experiences, travel stories, and unexplored routes across India.
+              He has worked in films including Dhurandhar: The Revenger and documents
+              real road experiences, travel stories, and unexplored routes across India.
             </p>
 
             <div class="author-links">
