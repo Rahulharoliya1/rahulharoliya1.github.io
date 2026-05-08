@@ -1,82 +1,297 @@
 <!DOCTYPE html>
-  <html lang="en-IN">
+<html lang="en-IN">
+
 <head>
+<link rel="icon"
+      type="image/png"
+      href="/static/images/favicon.png">
+  
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Rahul Haroliya – The Joker Rider™ Travel Blog | Bike Trips India</title>
-  <meta name="description" content="Travel blog by Rahul Haroliya – The Joker Rider™. Real bike trips, hidden places in India, travel tips and road stories.">
-<meta name="author" content="Rahul Haroliya">
-  <link rel="stylesheet" href="style.css" />
+
+  <meta name="description"
+    content="Travel blog by Rahul Haroliya – The Joker Rider™. Real bike trips, hidden places in India, travel tips and road stories.">
+
+  <meta name="author" content="Rahul Haroliya">
+  
+  <meta property="og:locale" content="en_IN">
+
+  <meta name="robots" content="index, follow">
+
+  <meta name="theme-color" content="#0b0b0b">
+
+  <meta property="og:site_name" content="Rahul Haroliya Travel Blog">
+<meta name="twitter:site" content="@rahulharoliya1">
+  <meta name="twitter:creator" content="@rahulharoliya1">
+  
+  <meta property="og:title"
+    content="Rahul Haroliya – The Joker Rider™ Travel Blog">
+
+  <meta property="og:description"
+    content="Real bike trips, hidden places in India, travel tips and road stories.">
+
+  <meta property="og:image"
+    content="https://rahulharoliya.site/static/images/rahul-hero.jpg">
+
+  <meta property="og:type"
+    content="website">
+
+  <meta property="og:url"
+      content="https://rahulharoliya.site/blog.html">
+
+  <link rel="canonical"
+    href="https://rahulharoliya.site/blog.html">
+
+  <link rel="stylesheet" href="/style.css" />
+
+  <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+  <link rel="dns-prefetch"
+    href="//www.instagram.com">
+
   <style>
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background: #0b0b0b;
+      color: #eee;
     }
+
+    /* ================= NAVBAR ================= */
+
+    .navbar {
+      background: #000;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-logo {
+      width: 200px;
+      height: 90px;
+      object-fit: contain;
+    }
+
+    /* ================= BLOG ================= */
+
     .blog {
       max-width: 1100px;
       margin: auto;
       padding: 40px 20px;
     }
+
     .blog h1 {
       text-align: center;
-      font-size: 36px;
+      font-size: 38px;
       margin-bottom: 10px;
+      color: #39ff14;
+      text-shadow: 0 0 15px rgba(57,255,20,0.8);
     }
-    .blog p {
+
+    .blog > p {
       text-align: center;
       font-size: 18px;
       margin-bottom: 40px;
-      color: #666;
+      color: #aaa;
     }
+
     .blog-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
     }
+
     .blog-card {
-      background: #fff;
-      border-radius: 10px;
+      background: radial-gradient(circle at top, #111, #000);
+      border: 1px solid rgba(57,255,20,0.25);
+      border-radius: 18px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+      transition: all 0.3s ease;
     }
+
     .blog-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
+      box-shadow:
+        0 0 25px rgba(57,255,20,0.6),
+        0 0 50px rgba(57,255,20,0.3);
     }
+
     .blog-card img {
       width: 100%;
-      height: 200px;
+      height: 220px;
       object-fit: cover;
     }
+
     .blog-card h2 {
       font-size: 22px;
       padding: 16px;
       margin: 0;
-      color: #222;
     }
+
+    .blog-card h2 a {
+      color: #39ff14;
+      text-decoration: none;
+    }
+
     .blog-card p {
       padding: 0 16px;
       font-size: 15px;
-      color: #666;
+      color: #ccc;
     }
+
     .blog-card a {
       display: block;
       padding: 16px;
       text-decoration: none;
-      color: #007BFF;
+      color: #39ff14;
       font-weight: bold;
     }
+
+    /* ================= FEATURED ================= */
+
+    .featured-card {
+      border: 2px solid #39ff14;
+      box-shadow:
+        0 0 25px rgba(57,255,20,0.8),
+        0 0 60px rgba(57,255,20,0.4);
+    }
+
+    /* ================= AUTHOR BOX ================= */
+
+    .author-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      background: #000;
+      padding: 15px;
+      border-radius: 12px;
+      max-width: 720px;
+      margin: 50px auto 30px;
+      border: 1px solid rgba(57,255,20,0.3);
+      box-shadow: 0 0 20px rgba(57,255,20,0.25);
+    }
+
+    .author-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #39ff14;
+      flex-shrink: 0;
+    }
+
+    .author-info h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #39ff14;
+    }
+
+    .author-info p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    .author-links {
+      margin-top: 8px;
+    }
+
+    .author-links a {
+      color: #39ff14;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* ================= FOOTER ================= */
+
     footer {
       text-align: center;
-      margin-top: 50px;
+      padding: 30px 15px;
       color: #777;
+      margin-top: 40px;
+      border-top: 1px solid #222;
     }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 768px) {
+
+      .blog h1 {
+        font-size: 30px;
+      }
+
+      .author-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-logo {
+        width: 160px;
+        height: auto;
+      }
+
+    }
+
   </style>
-</head>
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title"
+      content="Rahul Haroliya – The Joker Rider™ Travel Blog">
+
+<meta name="twitter:description"
+      content="Real bike trips, hidden places in India, travel tips and road stories.">
+
+<meta name="twitter:image"
+      content="https://rahulharoliya.site/static/images/rahul-hero.jpg">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Rahul Haroliya – The Joker Rider Travel Blog",
+  "url": "https://rahulharoliya.site/blog.html",
+  "description": "Real bike trips, hidden places in India, travel tips and road stories.",
+  "author": {
+    "@type": "Person",
+    "name": "Rahul Haroliya"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Rahul Haroliya"
+  }
+}
+</script>
   
+</head>
+
 <body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="sticky-top">
+
+    <nav class="navbar">
+
+      <a href="/">
+
+        <img src="/static/images/logo.png"
+     alt="Rahul Haroliya Logo"
+     class="nav-logo"
+     loading="eager">
+
+      </a>
+
+    </nav>
+
+  </header>
   
   <main class="blog">
     <h1>Rahul Haroliya’s Travel Blog</h1>
@@ -85,16 +300,32 @@
     <div class="blog-container">
 
       <!-- Featured: Rahul Haroliya Ki Kahani -->
-  <div class="blog-card" style="border: 2px solid #ffc107;">
-    <img src="static/images/rahul-hero.jpg" alt="Rahul Haroliya Ki Kahani" />
-    <h2>राहुल हरोलिया: एक प्रेरणादायक कहानी</h2>
-    <p>एक साधारण परिवार से निकले राहुल ने संघर्षों के बीच अपने पैशन और मेहनत से बनाई अपनी अलग पहचान।</p>
-    <a href="/blog/rahul-ki-kahani.html">📖 पूरी कहानी पढ़ें →</a>
-  </div>
+  <div class="blog-card featured-card">
+
+        <img src="/static/images/rahul-hero.jpg"
+             alt="Rahul Haroliya Ki Kahani"
+             loading="lazy" />
+
+        <h2>
+          <a href="/blog/rahul-ki-kahani.html">
+            राहुल हरोलिया: एक प्रेरणादायक कहानी
+          </a>
+        </h2>
+
+        <p>
+          एक साधारण परिवार से निकले राहुल ने संघर्षों के बीच
+          अपने पैशन और मेहनत से बनाई अपनी अलग पहचान।
+        </p>
+
+        <a href="/blog/rahul-ki-kahani.html">
+          📖 पूरी कहानी पढ़ें →
+        </a>
+
+      </div>
 
       <div class="blog-card">
   <a href="/blog/who-is-rahul-haroliya.html">
-    <img src="static/images/rahul-hero.jpg"
+    <img src="/static/images/rahul-hero.jpg"
          alt="Who is Rahul Haroliya The Joker Rider"
          loading="lazy">
   </a>
@@ -111,9 +342,39 @@
   <a href="/blog/who-is-rahul-haroliya.html">Read More →</a>
 </div>
 
+      <div class="blog-card">
+
+  <a href="/blog/rahul-haroliya-movies.html">
+
+    <img src="/static/images/rahul-cinema.jpg"
+         alt="Rahul Haroliya Movies and Acting Journey"
+         loading="lazy">
+
+  </a>
+
+  <h2>
+
+    <a href="/blog/rahul-haroliya-movies.html">
+      Rahul Haroliya’s Journey Into Indian Cinema
+    </a>
+
+  </h2>
+
+  <p>
+    Explore Rahul Haroliya’s acting journey, film projects,
+    motorcycle travel career, and rise as The Joker Rider™
+    in digital media and Indian cinema.
+  </p>
+
+  <a href="/blog/rahul-haroliya-movies.html">
+    Read More →
+  </a>
+
+</div>
+
      <div class="blog-card">
   <a href="/blog/gujarat-10-hidden-places.html">
-    <img src="static/images/gujarat-hidden-places-cover.jpg"
+    <img src="/static/images/gujarat-hidden-places-cover.jpg"
          alt="Gujarat hidden places travel blog cover"
          loading="lazy">
   </a>
@@ -134,7 +395,7 @@
 
       <div class="blog-card">
   <a href="/blog/ahmedabad-hidden-10-places.html">
-    <img src="static/images/ahmedabad-hidden-places.jpg"
+    <img src="/static/images/ahmedabad-hidden-places.jpg"
          alt="Ahmedabad ke hidden 10 places travel blog"
          loading="lazy">
   </a>
@@ -154,168 +415,188 @@
 
 
       <div class="blog-card">
-        <img src="static/images/biking-routes.jpg" alt="Top biking routes in India motorcycle travel" loading="lazy"/>
+        <img src="/static/images/biking-routes.jpg" alt="Top biking routes in India motorcycle travel" loading="lazy"/>
         <h2>भारत के टॉप 5 बाइकिंग रूट्स</h2>
         <p>भारत के सबसे रोमांचक और खूबसूरत बाइक राइडिंग रूट्स की जानकारी एक ही जगह।</p>
-        <a href="blog/top-biking-routes.html">Read More →</a>
+        <a href="/blog/top-biking-routes.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/manali-bike.jpg" alt="Manali Bike Trip">
+        <img src="/static/images/manali-bike.jpg" alt="Manali Bike Trip"
+          loading="lazy">
         <h2>मनाली बाइक ट्रिप की पूरी गाइड</h2>
         <p>अहमदाबाद से मनाली तक की शानदार बाइक यात्रा, खर्चे, रास्ते और जरूरी टिप्स।</p>
-        <a href="blog/manali-bike-trip.html">Read More →</a>
+        <a href="/blog/manali-bike-trip.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/ladakh-trip.jpg" alt="Bike Trip to Ladakh" />
+        <img src="/static/images/ladakh-trip.jpg" alt="Bike Trip to Ladakh"
+          loading="lazy">
         <h2>लद्दाख बाइक ट्रिप – एक सपनों की यात्रा</h2>
         <p>हिम, पहाड़ और अनंत रास्ते — मेरा सपना, लद्दाख की बाइक यात्रा, आखिरकार सच हुआ।</p>
         <a href="/blog/ladakh-trip.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/packing-items.jpg" alt="Packing items for bike trip" />
+        <img src="/static/images/packing-items.jpg" alt="Packing items for bike trip" 
+          loading="lazy">
         <h2>Top 5 Things to Pack for a Bike Trip</h2>
         <p>Heading for a ride? Don’t miss these 5 must-have items that can save your trip.</p>
         <a href="/blog/packing-items.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/pangong-lake.jpg" alt="Pangong Lake view" />
+        <img src="/static/images/pangong-lake.jpg" alt="Pangong Lake view" 
+          loading="lazy">
         <h2>Pangong Lake: Travel Tips & My Story</h2>
         <p>Peace, beauty, and challenges – my ride to Pangong Lake was unforgettable.</p>
         <a href="/blog/pangong-lake.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/ladakh-bike.jpg" alt="Ladakh Bike Guide" />
+        <img src="/static/images/ladakh-bike.jpg" alt="Ladakh Bike Guide" 
+          loading="lazy">
         <h2>लद्दाख बाइक ट्रिप की पूरी गाइड</h2>
         <p>खर्चा, रास्ता, मौसम और ज़रूरी गियर – सब कुछ इस गाइड में।</p>
-        <a href="blog/ladakh-bike-trip-guide.html">Read More →</a>
+        <a href="/blog/ladakh-bike-trip-guide.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/packing-guide.jpg" alt="Packing Guide Manali" />
+        <img src="/static/images/packing-guide.jpg" alt="Packing Guide Manali" 
+          loading="lazy">
         <h2>मनाली बाइक ट्रिप पैकिंग लिस्ट</h2>
         <p>राइड पर निकलने से पहले यह लिस्ट आपकी सबसे बड़ी मददगार होगी।</p>
-        <a href="blog/manali-bike-trip-packing-list.html">Read More →</a>
+        <a href="/blog/manali-bike-trip-packing-list.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/spiti-valley.jpg" alt="Spiti Valley Bike Trip">
+        <img src="/static/images/spiti-valley.jpg" alt="Spiti Valley Bike Trip"
+          loading="lazy">
         <h2>स्पीति वैली बाइक ट्रिप की पूरी गाइड</h2>
         <p>एक रोमांचक यात्रा जो आपको भारत की सबसे रहस्यमयी घाटी में ले जाएगी।</p>
-        <a href="blog/spiti-valley-bike-trip.html">Read More →</a>
+        <a href="/blog/spiti-valley-bike-trip.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/budget-roadtrip.jpg" alt="Budget Road Trip">
+        <img src="/static/images/budget-roadtrip.jpg" alt="Budget Road Trip"
+          loading="lazy">
         <h2>बजट में रोड ट्रिप कैसे प्लान करें?</h2>
         <p>कम पैसों में ज्यादा मज़ा – स्मार्ट ट्रैवलिंग के लिए जरूरी टिप्स।</p>
-        <a href="blog/budget-road-trip.html">Read More →</a>
+        <a href="/blog/budget-road-trip.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/monsoon-riding.jpg" alt="Monsoon Bike Riding">
+        <img src="/static/images/monsoon-riding.jpg" alt="Monsoon Bike Riding"
+          loading="lazy">
         <h2>मानसून में बाइक चलाते समय ज़रूरी सावधानियाँ</h2>
         <p>फिसलन, गड्ढे और सुरक्षा – बारिश में राइडिंग से पहले जानिए ये टिप्स।</p>
-        <a href="blog/rainy-season-riding-tips.html">Read More →</a>
+        <a href="/blog/rainy-season-riding-tips.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-        <img src="static/images/hidden-biking.jpg" alt="Hidden Biking Destinations">
+        <img src="/static/images/hidden-biking.jpg" alt="Hidden Biking Destinations"
+          loading="lazy">
         <h2>भारत के छुपे हुए बाइकिंग डेस्टिनेशन्स</h2>
         <p>ऐसे खूबसूरत रास्ते जो अब तक बहुत कम लोग जानते हैं।</p>
-        <a href="blog/hidden-biking-destinations.html">Read More →</a>
+        <a href="/blog/hidden-biking-destinations.html">Read More →</a>
       </div>
 
       <div class="blog-card">
-    <img src="static/images/bike-safety.jpg" alt="Bike Safety Tips" />
+    <img src="/static/images/bike-safety.jpg" alt="Bike Safety Tips"
+      loading="lazy">
     <h2>भारत में बाइकिंग के लिए जरूरी सुरक्षा उपाय</h2>
     <p>यात्रा को सुरक्षित और आनंददायक बनाने के लिए अपनाएं ये महत्वपूर्ण टिप्स।</p>
-    <a href="blog/blog-safety.html">Read More →</a>
+    <a href="/blog/blog-safety.html">Read More →</a>
   </div>
 
   <div class="blog-card">
-    <img src="static/images/fitness-roadtrip.jpg" alt="Fitness on Road Trip" />
+    <img src="/static/images/fitness-roadtrip.jpg" alt="Fitness on Road Trip"
+      loading="lazy">
     <h2>लंबे रोड ट्रिप के लिए फुर्सत में फिटनेस कैसे बनाए रखें</h2>
     <p>फिट और फ्रेश रहने के आसान उपाय – ट्रैवलिंग के दौरान भी हेल्दी रहें।</p>
-    <a href="blog/blog-fitness.html">Read More →</a>
+    <a href="/blog/blog-fitness.html">Read More →</a>
   </div>
 
       <div class="blog-card">
-  <img src="static/images/bike-photography.jpg" alt="Bike Photography Tips" />
+  <img src="/static/images/bike-photography.jpg" alt="Bike Photography Tips"
+    loading="lazy">
   <h2>बाइक ट्रिप पर कैमरा कैसे ले जाएँ</h2>
   <p>सही कैमरा, सुरक्षित माउंटिंग और शानदार एंगल – बाइक फोटोग्राफी की पूरी गाइड।</p>
-  <a href="blog/bike-trip-photography-tips.html">Read More →</a>
+  <a href="/blog/bike-trip-photography-tips.html">Read More →</a>
 </div>
 
       <div class="blog-card">
-  <img src="static/images/solo-travel.jpg" alt="Solo Travel India" />
+  <img src="/static/images/solo-travel.jpg" alt="Solo Travel India"
+    loading="lazy">
   <h2>भारत के टॉप 5 सुरक्षित सोलो ट्रैवल डेस्टिनेशन</h2>
   <p>अगर आप अकेले ट्रैवल करना चाहते हैं, तो इन जगहों को जरूर ट्राय करें।</p>
-  <a href="blog/solo-travel-safe-destinations.html">Read More →</a>
+  <a href="/blog/solo-travel-safe-destinations.html">Read More →</a>
 </div>
 
       <div class="blog-card">
-<img src="static/images/solo-bike-trip.jpg" alt="Solo Bike Trip Guide">
+<img src="/static/images/solo-bike-trip.jpg" alt="Solo Bike Trip Guide"
+  loading="lazy">
 <h2>India me Solo Bike Trip Kaise Plan Karein</h2>
 <p>Solo motorcycle travel guide, safety tips aur planning strategies for riders.</p>
-<a href="blog/solo-bike-trip-guide.html">Read More →</a>
+<a href="/blog/solo-bike-trip-guide.html">Read More →</a>
 </div>
 
       <div class="blog-card">
-<img src="static/images/gujarat-bike-trip.jpg" alt="Gujarat Bike Trip Guide">
+<img src="/static/images/gujarat-bike-trip.jpg" alt="Gujarat Bike Trip Guide"
+  loading="lazy">
 <h2>Gujarat Bike Trip Guide (2025)</h2>
 <p>Gujarat me best motorcycle routes, coastal rides aur forest roads ka complete guide for bike travelers.</p>
-<a href="blog/gujarat-bike-trip-guide.html">Read More →</a>
+<a href="/blog/gujarat-bike-trip-guide.html">Read More →</a>
 </div>
 
       <div class="blog-card">
-<img src="static/images/india-bike-routes.jpg" alt="India best bike trip routes travel guide">
+<img src="/static/images/india-bike-routes.jpg" alt="India best bike trip routes travel guide"
+  loading="lazy">
 <h2>India ke 10 Best Bike Trip Routes (2025)</h2>
 <p>India me kuch aise epic road trip routes hain jo har motorcycle rider ko life me ek baar zarur explore karne chahiye. Leh Ladakh se Goa tak ultimate riding guide.</p>
-<a href="blog/india-best-bike-routes.html">Read More →</a>
+<a href="/blog/india-best-bike-routes.html">Read More →</a>
 </div>
 
       <div class="blog-card">
-<img src="static/images/ahmedabad-ladakh-bike-trip.jpg" alt="Ahmedabad to Ladakh Bike Trip">
+<img src="/static/images/ahmedabad-ladakh-bike-trip.jpg" alt="Ahmedabad to Ladakh Bike Trip"
+  loading="lazy">
 <h2>Ahmedabad to Ladakh Bike Trip Guide (2025)</h2>
 <p>Ahmedabad se Ladakh bike trip ka complete guide. Route, distance, budget aur best time for riders jo Gujarat se Leh Ladakh adventure plan kar rahe hain.</p>
-<a href="blog/ahmedabad-to-ladakh-bike-trip.html">Read More →</a>
+<a href="/blog/ahmedabad-to-ladakh-bike-trip.html">Read More →</a>
 </div>
 
       <div class="blog-card">
 <img src="/static/images/bike-riding-gear.jpg" alt="Best Riding Gear for Long Bike Trips" loading="lazy">
 <h2>Best Riding Gear for Long Bike Trips (2025)</h2>
 <p>Long bike trip par safety aur comfort ke liye kaunsa riding gear zaruri hai? Helmet, jacket, gloves aur boots ka complete guide for motorcycle riders.</p>
-<a href="blog/best-riding-gear-bike-trip.html">Read More →</a>
+<a href="/blog/best-riding-gear-bike-trip.html">Read More →</a>
 </div>
 
       <div class="blog-card">
 <img src="/static/images/solo-bike-safety.jpg" alt="Solo Bike Trip Safety Tips" loading="lazy">
 <h2>Solo Bike Trip Safety Tips (2025)</h2>
 <p>Solo bike trip amazing adventure ho sakta hai, lekin safety bahut important hai. Long motorcycle rides ke liye essential safety tips guide.</p>
-<a href="blog/solo-bike-trip-safety-tips.html">Read More →</a>
+<a href="/blog/solo-bike-trip-safety-tips.html">Read More →</a>
 </div>
 
       <div class="blog-card">
 <img src="/static/images/kashmir-kanyakumari-bike-trip.jpg" alt="Kashmir to Kanyakumari Bike Trip Guide" loading="lazy">
 <h2>Kashmir to Kanyakumari Bike Trip Guide (India’s Longest Ride)</h2>
 <p>Kashmir se Kanyakumari tak bike trip India ki sabse epic road journey mani jati hai. Complete route, distance, budget aur travel tips guide.</p>
-<a href="blog/kashmir-kanyakumari-bike-trip.html">Read More →</a>
+<a href="/blog/kashmir-kanyakumari-bike-trip.html">Read More →</a>
 </div>
 
       <div class="blog-card">
-<img src="/static/images/best-time-bike-trip-india.jpg" alt="Best Time for Bike Trips in India">
+<img src="/static/images/best-time-bike-trip-india.jpg" alt="Best Time for Bike Trips in India"
+  loading="lazy">
 <h2>Best Time for Bike Trips in India</h2>
 <p>Month wise guide to plan motorcycle road trips across India.</p>
 <a href="/blog/best-time-bike-trip-india.html">Read More</a>
 </div>
 
       <div class="blog-card">
-<img src="/static/images/long-distance-bike-trip.jpg" alt="Long Distance Bike Trip Guide">
+<img src="/static/images/long-distance-bike-trip.jpg" alt="Long Distance Bike Trip Guide"
+  loading="lazy">
 <h2>How to Plan a Long Distance Bike Trip in India</h2>
 <p>Complete guide to plan motorcycle road trips in India including route planning, budget, safety and riding tips.</p>
 <a href="/blog/long-distance-bike-trip-guide-india.html">Read More</a>
@@ -331,182 +612,45 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 -->
-  
-  <!-- ================= AUTHOR BOX CSS ================= -->
-  <style>
-    .author-box {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 12px;
-      max-width: 720px;
-      margin: 30px auto;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
-
-    .author-img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .author-info h3 {
-      margin: 0 0 6px;
-      font-size: 18px;
-      color: #111;
-    }
-
-    .author-info p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.5;
-      color: #555;
-    }
-
-    .author-links {
-      margin-top: 6px;
-    }
-
-    .author-links a {
-      color: #1a73e8;
-      text-decoration: none;
-      font-size: 13px;
-    }
-
-    @media (max-width: 600px) {
-      .author-img {
-        width: 60px;
-        height: 60px;
-      }
-      .author-info h3 {
-        font-size: 16px;
-      }
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .author-box {
-        background: #1e1e1e;
-      }
-      .author-info h3 {
-        color: #ffffff;
-      }
-      .author-info p {
-        color: #cccccc;
-      }
-      .author-links a {
-        color: #8ab4f8;
-      }
-    }
-  </style>
 
 <!-- ================= AUTHOR BOX ================= -->
   <section class="author-box">
-    <img src="static/images/rahul-hero.jpg" alt="Rahul Haroliya" class="author-img">
+
+    <img src="/static/images/rahul-hero.jpg"
+         alt="Rahul Haroliya"
+         class="author-img"
+         loading="lazy">
 
     <div class="author-info">
+
       <h2>Rahul Haroliya (The Joker Rider™)</h2>
-    <p>Rahul Haroliya, also known as The Joker Rider™, is an Indian motorcycle travel blogger and digital content creator from Ahmedabad, Gujarat. Through his journeys he documents real road experiences, travel stories, and unexplored routes across India.</p>
+
+      <p>
+        Rahul Haroliya, also known as The Joker Rider™, is an Indian actor,
+        motorcycle travel blogger and digital content creator from Ahmedabad, Gujarat.
+        Through his journeys he documents real road experiences,
+        travel stories, and unexplored routes across India.
+      </p>
 
       <p class="author-links">
+
         <a href="/about.html">About</a> ·
-        <a href="https://www.instagram.com/rahulharoliya1/" target="_blank">Instagram</a>
+
+        <a href="https://www.instagram.com/rahulharoliya1/"
+           target="_blank"
+           rel="noopener">
+           Instagram
+        </a>
+
       </p>
+
     </div>
+
   </section>
 
  <footer>
     © 2026 Rahul Haroliya – The Joker Rider™. All rights reserved.
   </footer>
-
-<!-- =================================================================== -->
-<!-- ================= ADDITIONS ONLY (NEON + SPEED + SEO) ============== -->
-<!-- =================================================================== -->
-
-<style>
-/* ===== NEON BIKER OVERRIDE (NO REMOVAL) ===== */
-body {
-  background: #0b0b0b !important;
-  color: #eee !important;
-}
-
-.blog h1 {
-  color: #39ff14 !important;
-  text-shadow: 0 0 15px rgba(57,255,20,0.8);
-}
-
-.blog > p {
-  color: #aaa !important;
-}
-
-.blog-card {
-  background: radial-gradient(circle at top, #111, #000) !important;
-  border: 1px solid rgba(57,255,20,0.25) !important;
-  border-radius: 18px !important;
-  box-shadow: 0 0 20px rgba(0,0,0,0.8) !important;
-}
-
-.blog-card:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0 0 25px rgba(57,255,20,0.6),
-    0 0 50px rgba(57,255,20,0.3);
-}
-
-.blog-card h2,
-.blog-card h2 a {
-  color: #39ff14 !important;
-}
-
-.blog-card p {
-  color: #ccc !important;
-}
-
-.blog-card a {
-  color: #39ff14 !important;
-}
-
-  .blog-card h2 a {
-  text-decoration: none;
-}
-
-/* Featured card border fix */
-.blog-card[style] {
-  box-shadow:
-    0 0 25px rgba(57,255,20,0.8),
-    0 0 60px rgba(57,255,20,0.4) !important;
-}
-
-/* AUTHOR BOX NEON */
-.author-box {
-  background: #000 !important;
-  border: 1px solid rgba(57,255,20,0.3) !important;
-  box-shadow: 0 0 20px rgba(57,255,20,0.25) !important;
-}
-
-.author-img {
-  border: 2px solid #39ff14 !important;
-}
-
-.author-info h3 {
-  color: #39ff14 !important;
-}
-
-.author-info p {
-  color: #ccc !important;
-}
-
-.author-links a {
-  color: #39ff14 !important;
-}
-</style>
-
-<!-- ===== PERFORMANCE BOOST ===== -->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="dns-prefetch" href="//www.instagram.com">
 
 </body>
 </html>
