@@ -21,6 +21,6 @@ His vision is to inspire the next generation of Indian riders to explore fearles
 </p>
 <h3 class="text-center mt-4">Connect With Rahul</h3>
 <p class="text-center">
-Official Website: https://rahulharoliya1.site<br>
+Official Website: https://rahulharoliya.site<br>
 Instagram | YouTube | LinkedIn
 </p>
