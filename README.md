@@ -1,7 +1,7 @@
 <h2 class="mb-4 text-center">About Rahul Haroliya</h2>
 
 <p class="text-center">
-Rahul Haroliya is a National Travel Creator, Indian entrepreneur, and motorcycle explorer known for documenting authentic road journeys across India.
+Rahul Haroliya is a National Travel Creator, Indian Actor and motorcycle explorer known for documenting authentic road journeys across India.
 Popularly recognized as “The Joker Rider,” Rahul captures real travel experiences from winding Himalayan mountain roads to scenic coastal highways.
 </p>
 
