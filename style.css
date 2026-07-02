@@ -6,10 +6,6 @@ body {
   color: #333;
   transition: background-color 1s ease;
   padding-top: 0 !important;
-
-
-a, button, .btn, .nav-link {
-  cursor: url("/static/images/bike-cursor.cur"), pointer;
 }
 
 /* ===== Navbar ===== */
