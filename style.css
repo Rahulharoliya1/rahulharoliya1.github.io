@@ -7,9 +7,6 @@ body {
   transition: background-color 1s ease;
   padding-top: 0 !important;
 
-  /* 🏍️ Custom Bike Cursor */
-  cursor: url("/static/images/bike-cursor.cur"), auto;
-}
 
 a, button, .btn, .nav-link {
   cursor: url("/static/images/bike-cursor.cur"), pointer;
